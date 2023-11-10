@@ -3,6 +3,7 @@
   "routes": [
     { "src": "/backend/(.*)", "dest": "/backend/$1" },
     { "src": "/frontend/(.*)", "dest": "/frontend/$1" },
-    { "src": "/(.*)", "dest": "/frontend/index.html" }
+    { "src": "/(.*)", "dest": "/frontend/index.html" },
+    { "src": "/(.*)", "dest": "/backend/index.js" }
   ]
 }
