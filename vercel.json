@@ -1,0 +1,6 @@
+{
+  "builds": [
+    { "src": "backend", "use": "@vercel/node" },
+    { "src": "frontend", "use": "@vercel/build", "buildCommand": "npm run dev" }
+  ]
+}
