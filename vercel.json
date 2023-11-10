@@ -1,6 +1,12 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "backend", "use": "@vercel/node" },
-    { "src": "frontend", "use": "@vercel/build", "buildCommand": "npm run dev" }
+    { "src": "backend/**/*", "use": "@vercel/node" },
+    { "src": "frontend/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/backend/(.*)", "dest": "/backend/$1" },
+    { "src": "/frontend/(.*)", "dest": "/frontend/$1" },
+    { "src": "/(.*)", "dest": "/frontend/$1" }
   ]
 }
