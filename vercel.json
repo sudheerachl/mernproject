@@ -2,10 +2,10 @@
   "version": 2,
   "routes": [
     { "src": "/backend/(.*)", "dest": "/backend/$1" },
-    { "src": "/frontend/(.*)", "dest": "/frontend/dist/$1" },
-    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
+    { "src": "/frontend/(.*)", "dest": "/frontend/$1" },
+    { "src": "/(.*)", "dest": "/frontend/index.html" }
   ],
   "headers": [
-    { "source": "/frontend/dist/.*", "headers": [{ "key": "Content-Type", "value": "application/javascript" }] }
+    { "source": "/frontend/.*", "headers": [{ "key": "Content-Type", "value": "application/javascript" }] }
   ]
 }
