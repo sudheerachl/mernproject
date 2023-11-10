@@ -1,8 +1,12 @@
+// vercel.json
 {
   "version": 2,
   "routes": [
-    { "src": "/backend/(.*)", "dest": "/backend/index.js" },
-    { "src": "/frontend/(.*)", "dest": "/frontend/src/$1" },
+    { "src": "/backend/(.*)", "dest": "/backend/$1" },
+    { "src": "/frontend/(.*)", "dest": "/frontend/$1" },
     { "src": "/(.*)", "dest": "/frontend/index.html" }
+  ],
+  "headers": [
+    { "source": "/frontend/.*", "headers": [{ "key": "Content-Type", "value": "application/javascript" }] }
   ]
 }
