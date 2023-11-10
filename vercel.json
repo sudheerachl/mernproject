@@ -1,9 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "backend/**/*", "use": "@vercel/node" },
-    { "src": "frontend", "use": "@vercel/next" }
-  ],
   "routes": [
     { "src": "/backend/(.*)", "dest": "/backend/$1" },
     { "src": "/frontend/(.*)", "dest": "/frontend/$1" },
